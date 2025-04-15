@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-def plot_graph(df, *args):
+def plot_graph(df, *args, **kwargs):
     """
     Plots a graph according to data in 'df' and the columns informed on '*args'.
     """
@@ -13,4 +13,7 @@ def plot_graph(df, *args):
     plt.xlabel('Seconds')
     plt.ylabel('Value')
     
-    plt.savefig('./data/plot.png')
+    plt.savefig(kwargs.get('plot_path') if kwargs.get('plot_path') else './data/plot.png')
+
+def save_video(video, video_path='./data/video.mp4'):
+    video.write_videofile(video_path)

@@ -17,7 +17,7 @@ def clean_data(df, *args):
 
 def read_data(fpath, *args, **kwargs):
     """
-    Reads and preprocess data
+    Reads data and saves to adequate format
 
     params:
 
@@ -49,11 +49,6 @@ def read_data(fpath, *args, **kwargs):
         return time_str  # fallback in case of unexpected format
     df['time'] = df['time'].apply(fix_milliseconds)
     df['time'] = pd.to_datetime(df['time'], format='%Y-%m-%d %H:%M:%S:%f')
-
-    # Begin and end cuts (video sync)
-    """
-    STILL NEEDS TO BE ADDED!!!
-    """
 
     # Time passed column
     initial_date = df['time'].iloc[0]
