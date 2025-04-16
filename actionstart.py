@@ -56,6 +56,8 @@ def make_cuts_sensor(df, start_time=None, video_length=None):
     
     if start_time and video_length:
         df = df[df['seconds_passed'] < (start_time + video_length)]
+    elif video_length:
+        df = df[df['seconds_passed'] < video_length]
 
     df['seconds_passed'] = df['seconds_passed'] - df['seconds_passed'].min()
 
