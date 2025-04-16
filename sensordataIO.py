@@ -6,7 +6,7 @@ def read_txt(fpath):
     """
     Reads the WIT sensor .txt file
     """
-    df = pd.read_csv(fpath, sep='	')
+    df = pd.read_csv(fpath, sep='	', engine='python')
     return df
 
 def clean_data(df, *args):
