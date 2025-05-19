@@ -1,4 +1,5 @@
 absl-py==2.1.0
+altgraph==0.17.4
 astunparse==1.6.3
 bleach==6.2.0
 blinker==1.4
@@ -74,6 +75,8 @@ proglog==0.1.11
 protobuf==4.25.3
 Pygments==2.18.0
 PyGObject==3.42.1
+pyinstaller==6.13.0
+pyinstaller-hooks-contrib==2025.4
 PyJWT==2.3.0
 pyparsing==2.4.7
 python-apt==2.4.0+ubuntu2
